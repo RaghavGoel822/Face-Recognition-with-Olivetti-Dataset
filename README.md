@@ -28,9 +28,21 @@ The system pipeline consists of the following structure:
 5. **Detailed Evaluation**: Visualizing findings using Confusion Matrices (via Seaborn heatmaps), extensive Classification Reports (Precision, Recall, F1-Score), and Multi-class Precision-Recall Curves leveraging `OneVsRestClassifier`.
 
 ## Key Results
-- **Logistic Regression** achieved the best baseline performance with an accuracy of ~**93%**.
-- Using **Leave-One-Out Cross-Validation**, the Logistic Regression model demonstrated an excellent mean accuracy of **96%**.
+
+Baseline accuracy and cross-validated (5-fold) accuracy for each evaluated model:
+
+| Model | Baseline Accuracy | Cross-Validation Mean Accuracy |
+|-------|-------------------|----------------------------------|
+| Logistic Regression (LR) | **0.93** | **0.94** |
+| Support Vector Machine (SVM) | 0.92 | 0.87 |
+| Gaussian Naive Bayes (NB) | 0.88 | 0.79 |
+| K-Nearest Neighbors (KNN) | 0.68 | 0.69 |
+| Decision Tree (DT) | 0.64 | 0.48 |
+
+Further evaluation of the top-performing **Logistic Regression** model:
+- Using **Leave-One-Out Cross-Validation**, it demonstrated an excellent mean accuracy of **0.96**.
 - Multi-class Precision-Recall validation resulted in an impressive **Average Precision** score of **0.97** (micro-averaged across all 40 classes).
+
 
 ## Requirements
 Ensure you have the following Python libraries installed:
